@@ -1,0 +1,7 @@
+C:\Users\ruben\Documents\sharpdev_projects\test\test\bin\Debug\test.exe.config
+C:\Users\ruben\Documents\sharpdev_projects\test\test\bin\Debug\test.exe
+C:\Users\ruben\Documents\sharpdev_projects\test\test\bin\Debug\test.dll
+C:\Users\ruben\Documents\sharpdev_projects\test\test\obj\Debug\test.pyprojResolveAssemblyReference.cache
+C:\Users\ruben\Documents\sharpdev_projects\test\test\obj\Debug\test.exe
+C:\Users\ruben\Documents\sharpdev_projects\test\test\obj\Debug\test.MainForm.resources
+C:\Users\ruben\Documents\sharpdev_projects\test\test\obj\Debug\test.pyproj.GenerateResource.Cache
