@@ -103,7 +103,7 @@ class MainForm(Form):
 	def OnDoubleClicked(self, sender, e):
 		if e.Node.Text == 'Message':
 			self._label1.Text = 'Ooops, you clicked on Message'
-		elif e.Node.Text != 'Message':
+		else: 
 			self._label1.Text = 'You clicked on ' +str(e.Node.Text)
 		
 			
