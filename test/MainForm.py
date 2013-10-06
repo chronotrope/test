@@ -9,6 +9,11 @@ class MainForm(Form):
 		self.InitializeComponent()
 	
 	def InitializeComponent(self):
+		treeNode11 = System.Windows.Forms.TreeNode("MSH")
+		treeNode12 = System.Windows.Forms.TreeNode("EVN")
+		treeNode13 = System.Windows.Forms.TreeNode("Message", System.Array[System.Windows.Forms.TreeNode](
+			[treeNode11,
+			treeNode12]))
 		self._button1 = System.Windows.Forms.Button()
 		self._label1 = System.Windows.Forms.Label()
 		self._treeView1 = System.Windows.Forms.TreeView()
@@ -37,8 +42,17 @@ class MainForm(Form):
 		# 
 		self._treeView1.Location = System.Drawing.Point(112, 65)
 		self._treeView1.Name = "treeView1"
+		treeNode11.Name = "MSH"
+		treeNode11.Text = "MSH"
+		treeNode12.Name = "EVN"
+		treeNode12.Text = "EVN"
+		treeNode13.Name = "Message"
+		treeNode13.Text = "Message"
+		self._treeView1.Nodes.AddRange(System.Array[System.Windows.Forms.TreeNode](
+			[treeNode13]))
 		self._treeView1.Size = System.Drawing.Size(513, 277)
 		self._treeView1.TabIndex = 2
+		self._treeView1.NodeMouseDoubleClick += self.OnDoubleClicked
 		# 
 		# button2
 		# 
@@ -82,3 +96,14 @@ class MainForm(Form):
 
 	def Button2Click(self, sender, e):
 		pass
+
+	def TreeView1AfterSelect(self, sender, e):
+		self._label1.Text = 'selected'
+
+	def OnDoubleClicked(self, sender, e):
+		if e.Node.Text == 'Message':
+			self._label1.Text = 'Ooops, you clicked on Message'
+		elif e.Node.Text != 'Message':
+			self._label1.Text = 'You clicked on ' +str(e.Node.Text)
+		
+			
